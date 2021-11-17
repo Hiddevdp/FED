@@ -44,7 +44,7 @@ Home
 
 #### Screenshot(s) van de tweede pagina (small screen):
 hier de naam van de pagina
-<img src="images/Tony Screenshot Shop" width="375px" alt="Tony Chocolonely Shop">
+<img src="images/Tony Screenshot Shop.png" width="375px" alt="Tony Chocolonely Shop">
 
 </details>
 
@@ -62,7 +62,7 @@ hier de naam van de pagina
 <img src="images/Tony Screenshot Home Breakdown Dynamisch.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter):
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+//<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
