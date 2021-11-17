@@ -43,7 +43,7 @@ Home
 <img src="images/Tony Screenshot Home.png" width="375px" alt="Tony Chocolonely Home">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina
+Shop
 <img src="images/Tony Screenshot Shop.png" width="375px" alt="Tony Chocolonely Shop">
 
 </details>
