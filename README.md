@@ -40,11 +40,11 @@ https://tonyschocolonely.com/nl/nl
 
 #### Screenshot(s) van de eerste pagina (small screen):
 Home
-<img src="images/Tony Screenshot Home.png" width="375px" alt="Tony Chocolonely Home">
+<img src="media/Tony Screenshot Home.png" width="375px" alt="Tony Chocolonely Home">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Shop
-<img src="images/Tony Screenshot Shop.png" width="375px" alt="Tony Chocolonely Shop">
+<img src="media/Tony Screenshot Shop.png" width="375px" alt="Tony Chocolonely Shop">
 
 </details>
 
@@ -56,13 +56,13 @@ Shop
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina:
-<img src="images/Tony Screenshot Home Breakdown.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="media/Tony Screenshot Home Breakdown.jpg" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu):
-<img src="images/Tony Screenshot Home Breakdown Dynamisch.jpg" width="375px" alt="breakdown van een dynamisch deel">
+<img src="media/Tony Screenshot Home Breakdown Dynamisch.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 ### wellicht nog een dynamisch deel (bijv filter):
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+<img src="media/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -76,13 +76,13 @@ Shop
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik vond het lastig om te beginnen en alles weer een beetje onder de knie te krijgen, het is namelijk een tijdje geleden voor mij dat ik heb geprogrammeerd.
 
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
+| Romythu        | Hidde              | Fleur        | Sophie           |
 | ---            | ---                | ---          | ---              |
 | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
 | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |

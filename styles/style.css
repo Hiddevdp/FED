@@ -1,5 +1,107 @@
 /* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
+
+body {
+    background-color: dodgerblue;
+    margin: 0px;
+    position: absolute;
+}
+
+header {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: red;
+}
+
+header section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    background-color: aquamarine;
+    padding: 0px;
+}
+
+header img {
+    width: 4em;
+    margin: 10px;
+}
+
+video {
+    width: 100%;
+    padding: 10px;
+}
+
+section button {
+    border: none;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+
+}
+
+button:nth-of-type(2) {
+
+    background-color: white;
+    left: 10px;
+}
+
+#buttonContainer {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#buttonContainer p {
+    width: 120px;
+    color:white;
+    font-style: ;
+}
+
+article img{
+    padding-left:10px;
+    padding-right: 10px;
+    margin:0px;
+}
+
+article button{
+    border: none;
+    height: 30px;
+    width: 94.5%;
+    background-color: white;
+    display: inline-flex;
+    margin:-10px 10px;
+    padding:0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
