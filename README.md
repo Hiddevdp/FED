@@ -84,16 +84,16 @@ samen met je groepje opstellen
 
 | Romythu        | Hidde              | Fleur        | Sophie           |
 | ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| cirkel blijft  | Selectors          |              | wisselen van     |
+|dezelfde grootte| Plaatje heeft een  |              | focus            |
+| ...            | margin             |              | ...              |
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
+- maak eerst de hele html en ga dan met de css aan de slag
+- is gefixt door er een display:block; van te maken
 - nog een punt
 - ...
 
@@ -185,11 +185,11 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| Sofie          | Romy               | Fleur        | Hidde            |
+|                |                    |              |                  |
+| Plaatje staat  | Plaatjes blijven   | Carousel     | Flexbox          |
+| niet goed      | vierkant bij       |              |                  |
+|                | schalen            |              |                  |
 
 
 ### Verslag van meeting
