@@ -1,124 +1,728 @@
-/* CSS Document */
-
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
-
-body {
-    /* background-image: url(../media/TonyBackground.png); */
-    background-color: green;
-    padding: 0px;
-    margin: auto;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-}
-
-header {
-    width: 100vw;
-    max-width: 50em;
-    display: inline-flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    background-color: red 0%;
-    padding: 0px;
-    margin: auto;
-    right: auto;
-}
-
-header section {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    padding-left: 10px;
-    margin: 10px;
-    background-color: #06c;
-}
-
-header img {
-    height: 5em;
-    padding: 10px;
-    margin: 10px;
-    color: white;
-    background-color: #06c;
-}
-
-header section img {
-    height: 4em;
-    padding: 10px 10px 10px 0px;
-    width: auto;
-}
-
-video {
-    display: block;
-    width: 100vw;
-    max-width: 50em;
-    padding: 10px;
-    border: none;
-    margin: auto;
-}
-
-#buttonContainer {
-    display: inline-flex;
-    padding: 10px 10px 10px 10px;
-    margin: auto;
-    position: relative;
-    width: 100vw;
-    max-width: 31em;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
-#buttonContainer button {
-    border: none;
-    height: 7em;
-    width: 7em;
-    background-color: red;
-    border-radius: 50%;
-}
-
-#buttonContainer button:hover {
-    height: 8em;
-    width: 8em;
-}
-
-#buttonContainer p {
-    color: white;
-    width: 7em;
-}
-
-#buttonContainer button:nth-of-type(2) {
-    background-color: white;
-}
-
-.adContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-    width: auto;
-    max-width: 90em;
-}
-
-.adContainer article {
-    width: 25em;
-    padding: 10px 10px 10px 10px;
-    max-width: 30em;
-    min-width: 25em;
-}
-
-.adContainer article img {
-    border: none;
-    width: 100%;
-    display: block;
-}
-
-.adContainer article button {
-    border: none;
-    height: 30px;
-    background-color: white;
-    width: 100%;
-}
+        /* CSS Document */
+        
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --blue: #0066cc;
+        }
+        /* font inladen */
+        
+        @font-face {
+            font-family: AmericanTypewriter;
+            src: url("/media/AmericanTypewriter.ttf");
+        }
+        /* zet alle text in hetzelfde font */
+        
+        h1,
+        p,
+        a {
+            font-family: AmericanTypewriter;
+        }
+        
+        body {
+            background-color: var(--blue);
+            position: relative;
+            margin: auto;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+        }
+        /* Header--------------------------------------------------------------- */
+        
+        header {
+            width: 95vw;
+            margin: 20px auto 10px auto;
+            display: inline-flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            right: auto;
+            position: relative;
+        }
+        
+        header ul {
+            display: block;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            z-index: 2;
+        }
+        
+        header ul li {
+            float: left;
+            color: white;
+            text-align: center;
+            font-size: 1.5vw;
+            text-decoration: none;
+            cursor: default;
+            position: relative;
+        }
+        
+        header li>a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 10px 20px 0px;
+            text-decoration: none;
+            cursor: default;
+        }
+        /* onzichtbare dropdown */
+        
+        header li>div {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            background-color: #ff0000;
+            left: -50%;
+            margin-left: 25px;
+            width: 10em;
+            border: 5px solid white;
+            padding-bottom: 10px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        /* aanpassingen 2e en 3e dropdowns */
+        
+        header li:nth-of-type(2)>div {
+            background-color: var(--blue);
+            left: -4em;
+        }
+        
+        header li:nth-of-type(3)>div {
+            background-color: white;
+            border: 5px solid var(--blue);
+            left: -3.5em;
+        }
+        
+        header div a {
+            text-decoration: none;
+            font-size: 0.8em;
+            text-align: center;
+            padding: 10px 10px 0px 10px;
+        }
+        
+        header li:first-of-type>div a {
+            color: white;
+        }
+        
+        header li:nth-of-type(2)>div a {
+            color: white;
+        }
+        
+        header li:nth-of-type(3)>div a {
+            color: black;
+        }
+        /* bolletjes tussen de list items */
+        
+        header li>a::after {
+            content: ' \2022';
+            padding-top: 16px;
+        }
+        /* hover over de list items om de dropdown zichtbaar te maken */
+        
+        header ul li:hover div {
+            display: flex;
+        }
+        
+        header ul li div a:hover {
+            text-decoration: underline;
+        }
+        /* laat nav verdwijnen bij kleine schermen */
+        
+        @media (max-width:800px) {
+            header ul {
+                display: none;
+            }
+        }
+        
+        header img[src*="Menu"] {
+            display: block;
+            height: 4em;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            background-color: var(--blue);
+        }
+        /* laat nieuwe nav verschijnen bij kleine schermen */
+        
+        @media (min-width:800px) {
+            header img[src*="Menu"] {
+                display: none;
+            }
+            header {
+                justify-content: center;
+            }
+        }
+        /* blokje met knoppen aan de rechterkant */
+        
+        header section {
+            display: flex;
+            margin: 10px;
+        }
+        
+        header section img {
+            display: block;
+            height: 3em;
+            padding: 7px 7px 7px 0px;
+            width: auto;
+        }
+        /* Driehoekje voor nav hover div */
+        
+        ul li div>div {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            margin-left: -25px;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 25px solid red;
+        }
+        /* aanpassingen voor 2e en 3e dropdown */
+        
+        ul li:first-of-type>div>div {
+            border-bottom: 25px solid red;
+        }
+        
+        ul li:nth-of-type(2)>div>div {
+            border-bottom: 25px solid var(--blue);
+        }
+        
+        ul li:nth-of-type(3)>div>div {
+            border-bottom: 25px solid white;
+        }
+        /* homepage--------------------------------------------------------------------------- */
+        
+        video {
+            display: block;
+            width: 100vw;
+            max-width: 50em;
+            margin: 20px auto 10px auto;
+            border: none;
+        }
+        /* section met buttons */
+        
+        body>section {
+            display: inline-flex;
+            position: relative;
+            width: 100vw;
+            margin: 20px auto 0px auto;
+            max-width: 50em;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        
+        body>section button {
+            border: none;
+            height: 8em;
+            width: 8em;
+            padding: 0;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            transition: 0.15s;
+        }
+        
+        body>section>button:hover {
+            height: 9em;
+            width: 9em;
+            margin: -0.5em;
+        }
+        
+        body>section p {
+            color: white;
+            width: 8em;
+            text-align: center;
+        }
+        /* aanpassingen 2e button */
+        
+        body>section button:nth-of-type(2) {
+            background-color: white;
+        }
+        
+        body>section button h1 {
+            font-size: 1.5em;
+        }
+        
+        body>section button:nth-of-type(2) h1 {
+            color: var(--blue);
+            font-size: 1.4em;
+        }
+        /* section met links */
+        
+        body>section:nth-of-type(2) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
+            width: auto;
+            max-width: 90em;
+        }
+        
+        body>section:nth-of-type(2) div {
+            width: 25em;
+            padding: 10px 10px 10px 10px;
+            max-width: 30em;
+            min-width: 25em;
+        }
+        
+        body>section:nth-of-type(2) div img {
+            border: none;
+            width: 100%;
+            display: block;
+            transition: 0.15s;
+        }
+        
+        body>section:nth-of-type(2) div:hover img {
+            margin-bottom: -20px;
+        }
+        /* button onder de links */
+        
+        body>section:nth-of-type(2) div button {
+            border: none;
+            height: 30px;
+            background-color: white;
+            color: black;
+            width: 100%;
+            border-radius: 0%;
+            transition: 0.15s;
+            font-size: 20px;
+        }
+        /* hover voor de links */
+        
+        body>section:nth-of-type(2) div:hover button {
+            height: 50px;
+        }
+        /* footer homepagina------------------------------------------------------- */
+        
+        footer {
+            display: inline-flex;
+            flex-flow: row wrap;
+            border-top: 5px dotted white;
+            margin: 0em 5em 5em 5em;
+            padding-top: 1.5em;
+            justify-content: space-around;
+        }
+        
+        footer img {
+            height: 12em;
+        }
+        
+        footer ul img {
+            height: 2em;
+            margin: 0px auto 10px auto;
+        }
+        
+        footer ul {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+        
+        footer ul h1 {
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        footer ul li {
+            list-style-type: none;
+        }
+        
+        footer li a {
+            text-decoration: none;
+            display: block;
+            color: white;
+            text-align: center;
+            font-size: 15px;
+        }
+        
+        footer ul li:hover {
+            list-style: none;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        @media (max-width:1200px) {
+            footer {
+                display: none;
+            }
+        }
+        /* SHOP PAGINA--------------------------------------------------------- */
+        
+        #shop {
+            background-color: white;
+            position: relative;
+        }
+        /* aanpassingen voor de nav */
+        
+        #shop header ul li a {
+            color: black;
+        }
+        /* section voor de filters */
+        
+        #shop>section:first-of-type {
+            width: 100vw;
+            max-width: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        
+        #shop>section>section:first-of-type {
+            position: relative;
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        #shop section>h1 {
+            color: var(--blue);
+            font-size: 2.5em;
+            margin-top: 0px;
+            text-align: end;
+        }
+        /* form voor zoeken */
+        
+        #shop>section>section:first-of-type form:first-of-type {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 5px dotted black;
+        }
+        
+        #shop>section>section:first-of-type form>input {
+            width: 150px;
+            height: 30px;
+            font-size: 2em;
+            color: gray;
+            border: none;
+            background: none;
+        }
+        /* zoeken img */
+        
+        #shop>section>section:first-of-type img {
+            height: 30px;
+            margin-left: 10px;
+        }
+        /* slider */
+        
+        .slidecontainer {
+            position: relative;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        .slidecontainer span {
+            float: right;
+        }
+        
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 5px;
+            border-radius: 5px;
+            background: var(--blue);
+            outline: none;
+        }
+        
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 5px;
+            border-radius: 5px;
+            background: var(--blue);
+            outline: none;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: red;
+            cursor: pointer;
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #04AA6D;
+            cursor: pointer;
+        }
+        /* list met filters */
+        
+        #shop>section>section>ul {
+            list-style-type: none;
+        }
+        
+        #shop>section>section>ul li a {
+            text-decoration: none;
+            font-size: 1.3em;
+            color: black;
+        }
+        
+        #shop>section>section>ul li a:active {
+            background-color: var(--blue);
+        }
+        
+        #shop>section>section:first-of-type form:nth-of-type(2) {
+            display: flex;
+        }
+        /* section met filters verdwijnt bij klein scherm */
+        
+        @media(max-width:1200px) {
+            #shop>section>section:first-of-type {
+                display: none;
+            }
+        }
+        /* section met links en repen */
+        
+        #shop>section>section:nth-of-type(2) {
+            display: flex;
+            width: 75%;
+            max-width: 70em;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: auto;
+            padding: 0px;
+        }
+        
+        #shop>section>section:nth-of-type(2)>section {
+            position: relative;
+        }
+        /* section in het plaatje */
+        
+        #shop>section>section>section>div {
+            position: absolute;
+            bottom: 0px;
+            height: 100px;
+            width: 280px;
+            margin: 10px;
+            background-color: white;
+        }
+        
+        #shop section>div h1 {
+            color: black;
+            text-align: center;
+            width: 280px;
+        }
+        
+        #shop section>div p {
+            color: black;
+            text-align: center;
+            width: 280px;
+        }
+        
+        #shop section>section>section {
+            position: relative;
+            margin: 10px;
+        }
+        /* chocolade repen aanpassingen */
+        
+        #shop>section>section:nth-of-type(2)>section:nth-of-type(7) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 10px 10px 10px 10px;
+            padding: 0px;
+        }
+        
+        #shop>section>section:nth-of-type(2)>section:nth-of-type(7)div {
+            position: relative;
+            bottom: 0px;
+            height: 100px;
+            width: 280px;
+            margin: 10px;
+            background-color: white;
+        }
+        /* plaatje om toe te voegen aan cart */
+        
+        img[src*="addToCart"] {
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+        }
+        
+        img[src*="addToCart"]:hover {
+            cursor: pointer;
+        }
+        
+        #shop section>section>section>img {
+            width: 300px;
+        }
+        /* onzichtbare cart */
+        
+        #shop>div {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            background-color: var(--blue);
+            width: 30em;
+            padding: 10px;
+            right: 10px;
+        }
+        
+        #shop>div>h1 {
+            font-size: 2em;
+            color: white;
+        }
+        
+        #shop>div>section:first-of-type {
+            display: flex;
+            background-color: white;
+        }
+        
+        #shop>div>section:first-of-type>img {
+            height: 50px;
+            margin: 10px;
+        }
+        
+        #shop>div>section:first-of-type>section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-left: 10px;
+        }
+        
+        #shop>div>section:first-of-type>section>p {
+            margin: 0px;
+        }
+        
+        #shop>div>section:first-of-type>section>h1 {
+            color: black;
+            margin: 0px;
+            font-size: 1.5em;
+            text-align: start;
+        }
+        
+        #shop>div>button:first-of-type {
+            margin: 10px 0px auto auto;
+            width: 10em;
+            height: 3em;
+            align-content: center;
+            border: none;
+        }
+        
+        #shop>div>button:first-of-type h1 {
+            color: var(--blue);
+            font-size: 1.5em;
+            margin: auto;
+        }
+        
+        #shop>div>ul {
+            list-style: none;
+            width: 100%;
+            padding-right: 10px;
+            border-bottom: 5px dotted white;
+        }
+        
+        #shop>div>ul>li {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        #shop>div>ul>li>p {
+            color: white;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+        
+        #shop>div>section:nth-of-type(2) {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        
+        #shop>div>section:nth-of-type(2) img {
+            height: 100px;
+        }
+        
+        #shop>div>section:nth-of-type(2)>section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 10px;
+        }
+        
+        #shop>div>section:nth-of-type(2) h1 {
+            color: yellow;
+            text-align: start;
+            margin: 0px;
+        }
+        
+        #shop>div>section:nth-of-type(2) p {
+            color: white;
+            width: 300px;
+        }
+        
+        #shop>div>section:nth-of-type(3) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        #shop>div>section:nth-of-type(3) button {
+            height: 3em;
+            border: none;
+        }
+        
+        #shop>div>section:nth-of-type(3) button:first-of-type {
+            background: none;
+        }
+        
+        #shop>div>section:nth-of-type(3) button:nth-of-type(2) {
+            background-color: red;
+        }
+        
+        #shop>div>section:nth-of-type(3) button h1 {
+            font-size: 1.5em;
+            color: white;
+            margin: auto;
+        }
+        
+        #shop>div>div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+        }
+        
+        #shop>div>img {
+            position: absolute;
+            background-color: var(--blue);
+            width: 50px;
+            height: 50px;
+            right: 30px;
+            top: -50px;
+        }
+        
+        #shop>div>img:hover {
+            cursor: pointer;
+        }
+        /* footer shop pagina-------------------------------------------------------------- */
+        
+        #shop footer {
+            border-top: 5px dotted black;
+        }
+        
+        #shop footer a {
+            color: black;
+        }
+        
+        #shop footer h1 {
+            color: black;
+        }
